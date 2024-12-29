@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chessweeper Game</title>
+    <style>
+        body { margin: 0; }
+        iframe {
+            width: 100vw;
+            height: 100vh;
+            border: none; /* Remove iframe border */
+        }
+    </style>
+</head>
+<body>
+    <iframe src="{{ url_for('static', filename='Chessweeper.html') }}"></iframe>
+    <script>
+        addEventListener("click", function() {
+            var
+                el = document.documentElement
+                , rfs =
+                    el.requestFullScreen
+                    || el.webkitRequestFullScreen
+                    || el.mozRequestFullScreen
+            ;
+            rfs.call(el);
+        });
+    </script>
+</body>
+</html>
